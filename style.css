@@ -305,6 +305,7 @@ footer a{
     }
     #quoteMobile, #affirmationMobile{
     border: 3px solid #333;
+    background-color: rgb(236, 236, 236);
     padding: 10px;
     font-family: inherit;
     color: #333;
