@@ -306,10 +306,6 @@ footer a{
     font-family: inherit;
     color: #333;
     }
-    .theme-switch{
-      right: 0px;
-      position: relative;
-    }
     .empty-state__title, .empty-state__description{
       font-size: 15px;
       color: inherit;
