@@ -304,7 +304,7 @@ footer a{
     border: 3px solid #333;
     padding: 10px;
     font-family: inherit;
-    color: inherit;
+    color: #333;
     }
     .theme-switch{
       right: 0px;
