@@ -1,0 +1,331 @@
+:root{
+    --font-color-alt: black;
+    --font-color: #404040;
+    --background-image: url("/bglight.jpg");
+    --heading-color: #aebde6;
+}
+
+[data-theme="dark"] {
+    --font-color-alt: white;
+    --font-color: #e1e1ff;
+    --background-image: url("/bgdark.jpg");
+    --heading-color: #3a445f;
+}
+
+*, body{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: var(--background-image);
+    color: var(--font-color);
+}
+
+.theme-switch-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 10px;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  min-width: 60px;
+  
+}
+  
+.theme-switch input {
+  display:none;
+}
+  
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+  
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+  
+input:checked + .slider {
+  background-color: #333;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+  
+.slider.round {
+  border-radius: 34px;
+}
+  
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.desktop{
+    position: absolute;
+    min-width: 20vw;
+    padding: 10px;
+}
+
+#quoteDisplay, #affirmationDisplay{
+    width: 20vw;
+    padding: 15px;
+    text-align: center;
+}
+
+
+.quote, .affirmation, .quoteMobile, .affirmationMobile{
+  font-size: 20px;
+}
+
+#quote, #affirmation{
+  background-color: rgb(212, 211, 211);
+  border-radius: 4px;
+  border: 3px solid #333;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  text-align: center;
+}
+
+#quote:hover, #affirmation:hover{
+  border: 3px solid #fbfbfc;
+  
+}
+.checklist-icon{
+  padding: 15px;
+}
+.main-content{
+    min-width: 100vw;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+}
+.container-main{
+     min-width: 50vw;
+}
+.empty-state__description{
+  color: inherit;
+}
+footer{
+    position: fixed;
+    width: 100vw;
+    text-align: center;
+    bottom: 0;
+    font-size: 12px;
+    text-decoration: none;
+}
+footer a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.mobileVer{
+    display: none;
+    background-color:var(--heading-color);
+    padding: 24px;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin-top: -53px;
+    transform: translateX(-100%);
+    transition: transfrom 300ms ease-in-out;
+}
+
+.mobileVer-open{
+    transform: translateX(0)
+}
+
+.mobile-button, .menu-button{
+    border: none;
+    background-color: transparent;
+}
+.mobile-button, .menu-button{
+    display: none;
+}
+
+
+.todo-list {
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: start;
+    
+  }
+  
+  .todo-item {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+  }
+  
+  .todo-item span {
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 22px;
+   
+  }
+  
+  .done span {
+    text-decoration: line-through;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  .tick {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .tick::before {
+    content: '✓';
+    font-size: 2px;
+    display: none;
+  }
+  
+  .done .tick::before {
+    display: inline;
+  }
+  
+  .delete-todo {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .delete-todo svg {
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+  }
+  
+  .form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 3px solid #333;
+  }
+
+  .empty-state{
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      
+  }
+
+  .checklist-icon{
+      margin-bottom: 20px;
+  }
+
+  .empty-state__title, .empty-state__description{
+      margin-bottom: 20px;
+  }
+
+  .todo-list:empty{
+      display: none;
+  }
+
+  .todo-list:empty + .empty-state{
+      display: flex;
+  }
+
+  .empty-state__description{
+    color: var(--font-color-alt);
+  }
+
+@media screen and (max-width: 700px) {
+    .desktop{
+        display: none;
+        font-size: 18px;
+    }
+    .mobileVer{
+        display: block;
+    }
+    .mobile-button, .menu-button{
+        display: block;
+    }
+    .menu-button{
+      margin-left: 10px;
+      color: inherit;
+      margin-top: -40px;
+    }
+    .app-title{
+      font-size: 18px;
+    }
+    #date, #display{
+      font-size: 15px;
+      padding: 5px;
+    }
+    .quoteMobile, .affirmationMobile{
+      padding: 10px;
+      font-size: 20px;
+    }
+    #quoteMobile, #affirmationMobile{
+    border: 3px solid #333;
+    padding: 10px;
+    font-family: inherit;
+    color: inherit;
+    }
+    .theme-switch{
+      right: 0px;
+      position: relative;
+    }
+    .empty-state__title, .empty-state__description{
+      font-size: 15px;
+      color: inherit;
+    }
+    input[type="text"], .todo-item span{
+      font-size: 15px;
+    }
+    .tick{
+      width: 20px;
+      height: 20px;
+      margin-left: -20px;
+    }
+    footer{
+      width: 90vw;
+      font-size: 9px;
+      margin-left: 20px;
+    }
+    
+}
