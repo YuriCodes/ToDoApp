@@ -26,8 +26,8 @@ body{
 
 .theme-switch-wrapper{
     display: flex;
-    align-items: center;
     justify-content: end;
+    align-items: flex-end;
     padding: 10px;
 }
 
@@ -292,6 +292,9 @@ footer a{
     .app-title{
       font-size: 18px;
     }
+    .theme-switch{
+      margin-left: 300px;
+    }
     #date, #display{
       font-size: 15px;
       padding: 5px;
@@ -316,7 +319,7 @@ footer a{
     .tick{
       width: 20px;
       height: 20px;
-      margin-left: -20px;
+      margin-left: -10px;
     }
     footer{
       width: 90vw;
