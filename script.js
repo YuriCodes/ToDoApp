@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if(ref){
         todoItems = JSON.parse(ref)
         todoItems.forEach(t => {
-            renderTodo(t)
+            getTodo(t)
         })
     }
 })
